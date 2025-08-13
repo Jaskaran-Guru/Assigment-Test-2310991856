@@ -1,0 +1,99 @@
+{
+  "info": {
+    "name": "Game API",
+    "_postman_id": "b4b3c4e7-9f1a-4c72-a59e-112233445566",
+    "description": "Postman collection for Game API with Register, Login, Score, Leaderboard, and Top Users",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Register User",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"emailId\": \"test@gmail.com\",\n    \"password\": \"secure123\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/register",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["register"]
+        }
+      }
+    },
+    {
+      "name": "Login User",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"emailId\": \"test@gmail.com\",\n    \"password\": \"secure123\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["login"]
+        }
+      }
+    },
+    {
+      "name": "Submit Score",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"emailId\": \"test@gmail.com\",\n    \"profit\": 20,\n    \"loss\": 5,\n    \"time\": 2\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3000/find-score",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["find-score"]
+        }
+      }
+    },
+    {
+      "name": "Leaderboard (All Data)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:3000/leaderboard-dataAll",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["leaderboard-dataAll"]
+        }
+      }
+    },
+    {
+      "name": "Top Users (API Key)",
+      "request": {
+        "method": "GET",
+        "header": [
+          { "key": "x-api-key", "value": "supersecretapikey" }
+        ],
+        "url": {
+          "raw": "http://localhost:3000/top-user",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["top-user"]
+        }
+      }
+    }
+  ]
+}
